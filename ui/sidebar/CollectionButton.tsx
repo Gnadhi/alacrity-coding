@@ -1,27 +1,25 @@
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-
 type CollectionButtonProps = {
-  active?: boolean;
   icon: JSX.Element;
+  active?: boolean;
   activeIcon?: JSX.Element;
   text: string;
 };
 const CollectionButton = ({
-  active = false,
   icon,
+  active,
   activeIcon,
   text,
 }: CollectionButtonProps) => (
   <button
     type="button"
     className={clsx(
-      'flex grow items-center py-2 text-sm font-semibold leading-4 text-gray-300',
-      active && 'bg-light-gray-500',
+      'flex items-center py-2 text-sm text-white hover:bg-light-gray-300',
+      active && 'bg-light-gray-300',
     )}
   >
     {active ? activeIcon : icon}
-    {text}
+    <div className="px-1"> {text} </div>
   </button>
 );
 

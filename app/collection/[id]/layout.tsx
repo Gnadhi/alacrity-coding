@@ -1,12 +1,12 @@
 import '@/styles/globals.css';
 
-import CollectionButton from '@/ui/sidebar/collection-button';
+import CollectionButton from '@/ui/sidebar/CollectionButton';
+
 import {
   UserCircleIcon,
   PlusIcon,
   StarIcon,
   MagnifyingGlassIcon,
-  CommandLineIcon,
   InboxIcon,
   GlobeAltIcon,
 } from '@heroicons/react/24/outline';
@@ -23,7 +23,7 @@ export default function CollectionLayout({
 }) {
   return (
     <div>
-      <div className="md:insert-y-0 hidden bg-red-200 md:fixed md:flex md:w-64 md:flex-col">
+      <div className="md:insert-y-0 hidden md:fixed md:flex md:w-64 md:flex-col">
         {/* Left Sidebar */}
         <div className="z-20 flex flex-grow flex-col overflow-y-auto bg-green-100">
           {/* Left Sidebar Topbar */}
@@ -71,7 +71,7 @@ export default function CollectionLayout({
           <div className="flex px-4">
             <button
               type="button"
-              className="flex items-center py-1 text-sm font-semibold leading-4 text-gray-300 bg-dark-gray-500 px-2 rounded"
+              className="flex items-center rounded bg-dark-gray-500 py-1 px-2 text-sm font-semibold leading-4 text-gray-300"
             >
               <StarIcon className="mr-1 h-6 w-6" />
               Add
@@ -79,9 +79,7 @@ export default function CollectionLayout({
           </div>
         </div>
         {/*Right side main content */}
-        <main className="flex flex-1 flex-grow flex-col bg-blue-100">
-          {children}
-        </main>
+        <main className="flex flex-1 flex-grow flex-col bg-light-gray-500">{children}</main>
       </div>
     </div>
   );
