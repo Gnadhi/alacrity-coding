@@ -1,10 +1,7 @@
-import { Oswald } from '@next/font/google';
-
-// Oswald is the font that we use
-const oswald = Oswald();
+import '../styles/globals.css';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="en" className={oswald.className}>
+  <html lang="en">
     <head> </head>
     <body>{children} </body>
   </html>
